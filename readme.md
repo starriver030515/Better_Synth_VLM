@@ -19,7 +19,9 @@ $$ x_t = \sqrt{\alpha_t} x_{t-1} + \sqrt{1-\alpha_t} \epsilon$$
 其中：
 
 •   $\epsilon$是从标准正态分布$N(0, I)$中抽取的噪声。
-•   $\alpha_t$是一个预先定义的衰减因子序列，通常$\alpha_t$随着时间逐渐减小。
+
+•   $\alpha_t$是一个预先定义的衰减因子序列，
+通常$\alpha_t$随着时间逐渐减小。
 
 ##### Backward过程（Denoising Process）
 
@@ -30,6 +32,7 @@ $$p_\theta(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \sigma_t^2 
 其中：
 
 •   $\mu_\theta(x_t, t)$ 是由神经网络参数化的均值，它预测在给定当前噪声 $x_t$  和时间步  $t$  的情况下，原始数据  $x_{t-1}$  的位置。
+
 •   $\sigma_t^2$  是预定义的噪声方差。
 
 #### CLIPScore

@@ -1,0 +1,255 @@
+2024-09-06 12:41:31.748 | WARNING  | data_juicer.config.config:init_setup_from_cfg:384 - dataset_path [blip_laion_cc_sbu_558k_dj_fmt_only_caption.jsonl] is not a valid local path. Please check and retry, otherwise we will treat it as a remote dataset or a mixture of several datasets.
+2024-09-06 12:41:33.594 | INFO     | data_juicer.config.config:config_backup:618 - Back up the input config file [/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/llava-pretrain-refine.yaml] into the work_dir [/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer]
+2024-09-06 12:41:33.621 | INFO     | data_juicer.config.config:display_config:640 - Configuration table: 
+╒═════════════════════════╤══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╕
+│ key                     │ values                                                                                                                                       │
+╞═════════════════════════╪══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╡
+│ config                  │ [Path_fr(/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/llava-pretrain-refine.yaml)]                      │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ hpo_config              │ None                                                                                                                                         │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ data_probe_algo         │ 'uniform'                                                                                                                                    │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ data_probe_ratio        │ 1.0                                                                                                                                          │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ project_name            │ 'llava-1.5-pretrain-dataset-refine-recipe'                                                                                                   │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ executor_type           │ 'default'                                                                                                                                    │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ dataset_path            │ 'blip_laion_cc_sbu_558k_dj_fmt_only_caption.jsonl'                                                                                           │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ export_path             │ '/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/blip_laion_cc_sbu_558k_dj_fmt_only_caption_refined.jsonl' │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ export_shard_size       │ 0                                                                                                                                            │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ export_in_parallel      │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ keep_stats_in_res_ds    │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ keep_hashes_in_res_ds   │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ np                      │ 42                                                                                                                                           │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ text_keys               │ 'text'                                                                                                                                       │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ image_key               │ 'images'                                                                                                                                     │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ image_special_token     │ '<image>'                                                                                                                                    │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ audio_key               │ 'audios'                                                                                                                                     │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ audio_special_token     │ '<__dj__audio>'                                                                                                                              │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ video_key               │ 'videos'                                                                                                                                     │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ video_special_token     │ '<__dj__video>'                                                                                                                              │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ eoc_special_token       │ '<|__dj__eoc|>'                                                                                                                              │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ suffixes                │ []                                                                                                                                           │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ use_cache               │ True                                                                                                                                         │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ds_cache_dir            │ '/mnt/petrelfs/chenjingzhou/.cache/huggingface/datasets'                                                                                     │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ cache_compress          │ None                                                                                                                                         │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ use_checkpoint          │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ temp_dir                │ None                                                                                                                                         │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ open_tracer             │ True                                                                                                                                         │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ op_list_to_trace        │ []                                                                                                                                           │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ trace_num               │ 10                                                                                                                                           │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ op_fusion               │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ process                 │ [{'fix_unicode_mapper': {'accelerator': None,                                                                                                │
+│                         │                          'audio_key': 'audios',                                                                                              │
+│                         │                          'cpu_required': 1,                                                                                                  │
+│                         │                          'image_key': 'images',                                                                                              │
+│                         │                          'mem_required': 0,                                                                                                  │
+│                         │                          'normalization': None,                                                                                              │
+│                         │                          'num_proc': 42,                                                                                                     │
+│                         │                          'text_key': 'text',                                                                                                 │
+│                         │                          'video_key': 'videos'}},                                                                                            │
+│                         │  {'punctuation_normalization_mapper': {'accelerator': None,                                                                                  │
+│                         │                                        'audio_key': 'audios',                                                                                │
+│                         │                                        'cpu_required': 1,                                                                                    │
+│                         │                                        'image_key': 'images',                                                                                │
+│                         │                                        'mem_required': 0,                                                                                    │
+│                         │                                        'num_proc': 42,                                                                                       │
+│                         │                                        'text_key': 'text',                                                                                   │
+│                         │                                        'video_key': 'videos'}},                                                                              │
+│                         │  {'alphanumeric_filter': {'accelerator': None,                                                                                               │
+│                         │                           'audio_key': 'audios',                                                                                             │
+│                         │                           'cpu_required': 1,                                                                                                 │
+│                         │                           'image_key': 'images',                                                                                             │
+│                         │                           'max_ratio': 9223372036854775807,                                                                                  │
+│                         │                           'mem_required': 0,                                                                                                 │
+│                         │                           'min_ratio': 0.6,                                                                                                  │
+│                         │                           'num_proc': 42,                                                                                                    │
+│                         │                           'stats_export_path': None,                                                                                         │
+│                         │                           'text_key': 'text',                                                                                                │
+│                         │                           'tokenization': False,                                                                                             │
+│                         │                           'video_key': 'videos'}},                                                                                           │
+│                         │  {'character_repetition_filter': {'accelerator': None,                                                                                       │
+│                         │                                   'audio_key': 'audios',                                                                                     │
+│                         │                                   'cpu_required': 1,                                                                                         │
+│                         │                                   'image_key': 'images',                                                                                     │
+│                         │                                   'max_ratio': 0.09373663,                                                                                   │
+│                         │                                   'mem_required': 0,                                                                                         │
+│                         │                                   'min_ratio': 0.0,                                                                                          │
+│                         │                                   'num_proc': 42,                                                                                            │
+│                         │                                   'rep_len': 10,                                                                                             │
+│                         │                                   'stats_export_path': None,                                                                                 │
+│                         │                                   'text_key': 'text',                                                                                        │
+│                         │                                   'video_key': 'videos'}},                                                                                   │
+│                         │  {'flagged_words_filter': {'accelerator': None,                                                                                              │
+│                         │                            'audio_key': 'audios',                                                                                            │
+│                         │                            'cpu_required': 1,                                                                                                │
+│                         │                            'flagged_words_dir': '/mnt/petrelfs/chenjingzhou/.cache/data_juicer/assets',                                      │
+│                         │                            'image_key': 'images',                                                                                            │
+│                         │                            'lang': 'en',                                                                                                     │
+│                         │                            'max_ratio': 0.0,                                                                                                 │
+│                         │                            'mem_required': 0,                                                                                                │
+│                         │                            'num_proc': 42,                                                                                                   │
+│                         │                            'stats_export_path': None,                                                                                        │
+│                         │                            'text_key': 'text',                                                                                               │
+│                         │                            'tokenization': False,                                                                                            │
+│                         │                            'use_words_aug': False,                                                                                           │
+│                         │                            'video_key': 'videos',                                                                                            │
+│                         │                            'words_aug_group_sizes': [2],                                                                                     │
+│                         │                            'words_aug_join_char': ''}},                                                                                      │
+│                         │  {'perplexity_filter': {'accelerator': None,                                                                                                 │
+│                         │                         'audio_key': 'audios',                                                                                               │
+│                         │                         'cpu_required': 1,                                                                                                   │
+│                         │                         'image_key': 'images',                                                                                               │
+│                         │                         'lang': 'en',                                                                                                        │
+│                         │                         'max_ppl': 5591.0,                                                                                                   │
+│                         │                         'mem_required': 0,                                                                                                   │
+│                         │                         'num_proc': 42,                                                                                                      │
+│                         │                         'stats_export_path': None,                                                                                           │
+│                         │                         'text_key': 'text',                                                                                                  │
+│                         │                         'video_key': 'videos'}},                                                                                             │
+│                         │  {'special_characters_filter': {'accelerator': None,                                                                                         │
+│                         │                                 'audio_key': 'audios',                                                                                       │
+│                         │                                 'cpu_required': 1,                                                                                           │
+│                         │                                 'image_key': 'images',                                                                                       │
+│                         │                                 'max_ratio': 0.42023757,                                                                                     │
+│                         │                                 'mem_required': 0,                                                                                           │
+│                         │                                 'min_ratio': 0.16534802,                                                                                     │
+│                         │                                 'num_proc': 42,                                                                                              │
+│                         │                                 'stats_export_path': None,                                                                                   │
+│                         │                                 'text_key': 'text',                                                                                          │
+│                         │                                 'video_key': 'videos'}},                                                                                     │
+│                         │  {'word_repetition_filter': {'accelerator': None,                                                                                            │
+│                         │                              'audio_key': 'audios',                                                                                          │
+│                         │                              'cpu_required': 1,                                                                                              │
+│                         │                              'image_key': 'images',                                                                                          │
+│                         │                              'lang': 'en',                                                                                                   │
+│                         │                              'max_ratio': 0.03085751,                                                                                        │
+│                         │                              'mem_required': 0,                                                                                              │
+│                         │                              'min_ratio': 0.0,                                                                                               │
+│                         │                              'num_proc': 42,                                                                                                 │
+│                         │                              'rep_len': 10,                                                                                                  │
+│                         │                              'stats_export_path': None,                                                                                      │
+│                         │                              'text_key': 'text',                                                                                             │
+│                         │                              'tokenization': False,                                                                                          │
+│                         │                              'video_key': 'videos'}}]                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ percentiles             │ []                                                                                                                                           │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ export_original_dataset │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ save_stats_in_one_file  │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ ray_address             │ 'auto'                                                                                                                                       │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ debug                   │ False                                                                                                                                        │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ work_dir                │ '/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer'                                                          │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ timestamp               │ '20240906124131'                                                                                                                             │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ dataset_dir             │ ''                                                                                                                                           │
+├─────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ add_suffix              │ False                                                                                                                                        │
+╘═════════════════════════╧══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╛
+2024-09-06 12:41:33.625 | INFO     | data_juicer.core.executor:__init__:47 - Using cache compression method: [None]
+2024-09-06 12:41:33.626 | INFO     | data_juicer.core.executor:__init__:52 - Setting up data formatter...
+2024-09-06 12:41:33.628 | INFO     | data_juicer.core.executor:__init__:74 - Preparing exporter...
+2024-09-06 12:41:33.629 | INFO     | data_juicer.core.executor:__init__:86 - Preparing tracer...
+2024-09-06 12:41:33.631 | INFO     | data_juicer.core.executor:__init__:90 - Trace for all ops.
+2024-09-06 12:41:33.632 | INFO     | data_juicer.core.executor:run:151 - Loading dataset from data formatter...
+2024-09-06 12:41:33.980 | ERROR    | __main__:<module>:19 - An error has been caught in function '<module>', process 'MainProcess' (52701), thread 'MainThread' (140294159808320):
+Traceback (most recent call last):
+
+> File "/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/tools/process_data.py", line 19, in <module>
+    main()
+    └ <function main at 0x7f92c29f0670>
+
+  File "/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/tools/process_data.py", line 15, in main
+    executor.run()
+    │        └ <function Executor.run at 0x7f92c29f04c0>
+    └ <data_juicer.core.executor.Executor object at 0x7f92c2693df0>
+
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/data_juicer/core/executor.py", line 154, in run
+    dataset = self.formatter.load_dataset(load_data_np, self.cfg)
+              │    │         │            │             │    └ Namespace(config=[Path_fr(/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/llava-pretrain-re...
+              │    │         │            │             └ <data_juicer.core.executor.Executor object at 0x7f92c2693df0>
+              │    │         │            └ 42
+              │    │         └ <function MixtureFormatter.load_dataset at 0x7f92c7babf40>
+              │    └ <data_juicer.format.mixture_formatter.MixtureFormatter object at 0x7f92c28d0cd0>
+              └ <data_juicer.core.executor.Executor object at 0x7f92c2693df0>
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/data_juicer/format/mixture_formatter.py", line 135, in load_dataset
+    dataset = formatter.load_dataset(num_proc, global_cfg)
+              │         │            │         └ Namespace(config=[Path_fr(/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/llava-pretrain-re...
+              │         │            └ 42
+              │         └ <function RemoteFormatter.load_dataset at 0x7f92c7baba30>
+              └ <data_juicer.format.formatter.RemoteFormatter object at 0x7f92c28d3a90>
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/data_juicer/format/formatter.py", line 112, in load_dataset
+    ds = load_dataset(self.path,
+         │            │    └ 'blip_laion_cc_sbu_558k_dj_fmt_only_caption.jsonl'
+         │            └ <data_juicer.format.formatter.RemoteFormatter object at 0x7f92c28d3a90>
+         └ <function load_dataset at 0x7f97801d2050>
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 2556, in load_dataset
+    builder_instance = load_dataset_builder(
+                       └ <function load_dataset_builder at 0x7f97801d1d80>
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 2228, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+                     └ <function dataset_module_factory at 0x7f97801d0550>
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 1873, in dataset_module_factory
+    raise e1 from None
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 1815, in dataset_module_factory
+    raise DatasetNotFoundError(msg + f" at revision '{revision}'" if revision else msg)
+          │                    │                                     │             └ "Dataset 'blip_laion_cc_sbu_558k_dj_fmt_only_caption.jsonl' doesn't exist on the Hub or cannot be accessed"
+          │                    │                                     └ None
+          │                    └ "Dataset 'blip_laion_cc_sbu_558k_dj_fmt_only_caption.jsonl' doesn't exist on the Hub or cannot be accessed"
+          └ <class 'datasets.exceptions.DatasetNotFoundError'>
+
+datasets.exceptions.DatasetNotFoundError: Dataset 'blip_laion_cc_sbu_558k_dj_fmt_only_caption.jsonl' doesn't exist on the Hub or cannot be accessed
+Traceback (most recent call last):
+  File "/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/tools/process_data.py", line 19, in <module>
+    main()
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/loguru/_logger.py", line 1277, in catch_wrapper
+    return function(*args, **kwargs)
+  File "/mnt/petrelfs/chenjingzhou/synth_challenge/solution2/with_data-juicer/data-juicer/tools/process_data.py", line 15, in main
+    executor.run()
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/data_juicer/core/executor.py", line 154, in run
+    dataset = self.formatter.load_dataset(load_data_np, self.cfg)
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/data_juicer/format/mixture_formatter.py", line 135, in load_dataset
+    dataset = formatter.load_dataset(num_proc, global_cfg)
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/data_juicer/format/formatter.py", line 112, in load_dataset
+    ds = load_dataset(self.path,
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 2556, in load_dataset
+    builder_instance = load_dataset_builder(
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 2228, in load_dataset_builder
+    dataset_module = dataset_module_factory(
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 1873, in dataset_module_factory
+    raise e1 from None
+  File "/mnt/petrelfs/chenjingzhou/anaconda3/envs/dj/lib/python3.10/site-packages/datasets/load.py", line 1815, in dataset_module_factory
+    raise DatasetNotFoundError(msg + f" at revision '{revision}'" if revision else msg)
+datasets.exceptions.DatasetNotFoundError: Dataset 'blip_laion_cc_sbu_558k_dj_fmt_only_caption.jsonl' doesn't exist on the Hub or cannot be accessed

@@ -18,8 +18,8 @@ $$ x_t = \sqrt{\alpha_t} x_{t-1} + \sqrt{1-\alpha_t} \epsilon$$
 
 其中：
 
-•   $\epsilon$  是从标准正态分布  $N(0, I)$ 中抽取的噪声。
-•   $\alpha_t$  是一个预先定义的衰减因子序列，通常$\alpha_t$随着时间逐渐减小。
+•   $\epsilon$是从标准正态分布$N(0, I)$中抽取的噪声。
+•   $\alpha_t$是一个预先定义的衰减因子序列，通常$\alpha_t$随着时间逐渐减小。
 
 ##### Backward过程（Denoising Process）
 

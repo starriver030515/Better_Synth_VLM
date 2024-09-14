@@ -26,9 +26,10 @@ $$ x_t = \sqrt{\alpha_t} x_{t-1} + \sqrt{1-\alpha_t} \epsilon$$
 在Backward过程中，模型的任务是逆转Forward过程，从噪声中逐步恢复出原始数据。这个过程使用了一个参数化的模型  $p_\theta$ ，它试图预测在给定  $x_t$ 的情况下  $x_{t-1}$ 的条件分布：
 
 $$p_\theta(x_{t-1} | x_t) = \mathcal{N}(x_{t-1}; \mu_\theta(x_t, t), \sigma_t^2 I)$$
+
 其中：
 
-•   $\mu_\theta(x_t, t) $ 是由神经网络参数化的均值，它预测在给定当前噪声  x_t  和时间步  t  的情况下，原始数据  x_{t-1}  的位置。
+•   $\mu_\theta(x_t, t)$ 是由神经网络参数化的均值，它预测在给定当前噪声  x_t  和时间步  t  的情况下，原始数据  x_{t-1}  的位置。
 •   $\sigma_t^2$  是预定义的噪声方差。
 
 #### CLIPScore
